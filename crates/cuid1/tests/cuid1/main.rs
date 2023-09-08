@@ -1,6 +1,4 @@
-//! Test entrypoint for (deprecated) cuid() function
-
-#![allow(deprecated)]
+//! Test entrypoint for cuid() function
 
 mod collisions;
 mod length;

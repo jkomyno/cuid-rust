@@ -38,7 +38,6 @@ mod error;
 mod text;
 mod time;
 
-#[allow(deprecated)]
 pub use cuid1::{cuid, is_cuid, is_slug, slug};
 pub use cuid2::create_id as cuid2;
 pub use error::CuidError;

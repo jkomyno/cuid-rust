@@ -1,4 +1,3 @@
-#[allow(deprecated)]
 use cuid::{cuid, slug};
 use std::{
     env::{self, Args},
@@ -20,10 +19,8 @@ pub fn main() {
         }
         false => {
             if args.slug {
-                #[allow(deprecated)]
                 slug()
             } else {
-                #[allow(deprecated)]
                 cuid()
             }
         }

@@ -37,11 +37,6 @@ static FINGERPRINT: Lazy<String> =
 /// let id = cuid::cuid();
 /// assert!(cuid::is_cuid(id.unwrap()));
 /// ```
-#[deprecated(
-    since = "1.3.0",
-    note = "cuid() is deprecated. Use cuid2() instead, or switch to the cuid2 crate. See \
-            https://github.com/paralleldrive/cuid2#improvements-over-cuid for more information"
-)]
 #[inline]
 pub fn cuid() -> Result<String, CuidError> {
     Ok([
@@ -84,12 +79,6 @@ pub fn cuid() -> Result<String, CuidError> {
 /// let slug = cuid::slug();
 /// assert!(cuid::is_slug(slug.unwrap()));
 /// ```
-#[deprecated(
-    since = "1.3.0",
-    note = "slug() is based on cuid(), which is deprecated. Use cuid2() instead, \
-            or switch to the cuid2 crate. See \
-            https://github.com/paralleldrive/cuid2#improvements-over-cuid for more information"
-)]
 #[inline]
 pub fn slug() -> Result<String, CuidError> {
     let timestamp = time::timestamp()?;
@@ -114,12 +103,6 @@ pub fn slug() -> Result<String, CuidError> {
 /// let id = cuid::cuid().unwrap();
 /// assert!(cuid::is_cuid(id));
 /// ```
-#[deprecated(
-    since = "1.3.0",
-    note = "is_cuid() is based on cuid(), which is deprecated. Use cuid2() instead, \
-            or switch to the cuid2 crate. See \
-            https://github.com/paralleldrive/cuid2#improvements-over-cuid for more information"
-)]
 #[inline]
 pub fn is_cuid<S: AsRef<str>>(to_check: S) -> bool {
     let to_check = to_check.as_ref();
@@ -145,12 +128,6 @@ pub fn is_cuid<S: AsRef<str>>(to_check: S) -> bool {
 /// let slug = cuid::slug().unwrap();
 /// assert!(cuid::is_slug(slug));
 /// ```
-#[deprecated(
-    since = "1.3.0",
-    note = "is_slug() is based on cuid(), which is deprecated. Use cuid2() instead, \
-            or switch to the cuid2 crate. See \
-            https://github.com/paralleldrive/cuid2#improvements-over-cuid for more information"
-)]
 #[inline]
 pub fn is_slug<S: AsRef<str>>(to_check: S) -> bool {
     // the slug will always be 10 characters
@@ -159,8 +136,6 @@ pub fn is_slug<S: AsRef<str>>(to_check: S) -> bool {
 
 #[cfg(test)]
 mod tests {
-    #![allow(deprecated)]
-
     use super::*;
 
     #[test]
@@ -197,8 +172,6 @@ mod tests {
 #[cfg(nightly)]
 #[cfg(test)]
 mod benchmarks {
-    #![allow(deprecated)]
-
     use super::*;
     use test::Bencher;
 
