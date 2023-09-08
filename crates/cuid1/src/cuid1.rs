@@ -27,7 +27,7 @@ static FINGERPRINT: Lazy<String> =
 /// - The timestamp in milliseconds as a base 36 number
 /// - An atomic counter that goes from 0 through 36^4 and then repeats, as a
 ///   base 36 number
-/// - A (base 36) fingerprint derived from the system's hostname
+/// - A (base 36) fingerprint derived from a hash of thread-local random numbers
 /// - Two random numbers between 0 and 36^4, each converted to base 36
 ///
 /// # Examples
