@@ -411,6 +411,15 @@ mod test {
     use super::*;
 
     #[test]
+    fn fingerprint_length() {
+        let fingerprint = get_fingerprint();
+
+        println!("fingerprint: {}", &fingerprint);
+
+        assert_eq!(fingerprint.len(), BIG_LENGTH as usize);
+    }
+
+    #[test]
     fn counter_increments() {
         let start = get_count();
         let next = get_count();

@@ -1,8 +1,12 @@
 # cuid-rust
 
-[![Build Status](https://github.com/mplanchard/cuid-rust/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/mplanchard/cuid-rust/actions/workflows/ci.yml?query=branch%3Amaster)
+[![Build Status](https://github.com/prisma/cuid-rust/actions/workflows/ci.yml/badge.svg?branch=jkomyno%2Fwasm32)](https://github.com/prisma/cuid-rust/actions/workflows/ci.yml?query=branch%3Ajkomyno%2Fwasm32)
 [![Crates.io](https://img.shields.io/crates/v/cuid2 "Crates.io")](https://crates.io/crates/cuid2/)
 [![docs.rs](https://docs.rs/cuid/badge.svg)](https://docs.rs/cuid2/)
+
+**Note**: this is a Prisma fork of aimed at enabling `wasm32-unknown-unknown` target support to `cuid`.
+
+--
 
 This repository is the home of the [cuid] and [cuid2] crates. The original
 CUID standard is marked as [deprecated](https://github.com/paralleldrive/cuid2#improvements-over-cuid)
